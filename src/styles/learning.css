@@ -1,0 +1,258 @@
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #444;
+}
+
+.table th {
+    background-color: #ff8c00;
+    color: white;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table .no-data {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-update {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.btn-save {
+    background-color: #32cd32;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #ff4500;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Add Learning Area Form */
+.add-area {
+    display: flex;
+    justify-content: flex-start; /* Align children to the left */
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.add-input {
+    padding: 10px 15px;
+    width: 75%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.add-input:focus {
+    border-color: #ff8c00;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.btn-add {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Add space between the input and button */
+}
+
+
+.add-area button {
+    margin-left: 10px;
+}
+
+.add-area input {
+    margin-right: 10px;
+}
+
+.add-area .btn-add:hover {
+  background-color: #0056b3;
+}
+
+/* Loading and Error */
+.loading,
+.error {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+}
+
+.modal {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.modal h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-actions .btn-confirm {
+    background-color: #32cd32;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.modal-actions .btn-cancel {
+    background-color: #ff4500;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.modal-actions .btn-confirm:hover,
+.modal-actions .btn-cancel:hover {
+    opacity: 0.9;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #32cd32;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.toast.error {
+    background-color: #ff4500;
+}
+
+.toast.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .table th, .table td {
+        font-size: 14px;
+    }
+
+    .add-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .add-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .add-area button {
+        width: 100%;
+    }
+}

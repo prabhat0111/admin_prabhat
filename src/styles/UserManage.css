@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-nav li {
+  font-size: 1.1rem;
+}
+
+.navbar-nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: #ffc107;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* User Form */
+.user-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.user-form h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-form .form-group {
+  margin-bottom: 20px;
+}
+
+.user-form label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.user-form input,
+.user-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.user-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.user-form .btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-form .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.user-form .btn-secondary {
+  background-color: #ddd;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-form .btn-secondary:hover {
+  background-color: #bbb;
+}
+
+/* User List */
+.user-list {
+  background-color: white;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 30px auto;
+}
+
+.user-list h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-list ul {
+  list-style-type: none;
+}
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-list li .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-list li .user-info span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.user-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.user-actions button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.user-actions .btn-edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.user-actions .btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.user-actions .btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.user-actions .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .user-form {
+    width: 90%;
+  }
+
+  .user-list {
+    width: 90%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav li {
+    font-size: 1.2rem;
+  }
+
+  .user-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .user-list h2 {
+    font-size: 1.5rem;
+  }
+}
